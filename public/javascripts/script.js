@@ -157,6 +157,4 @@ $(window).scroll(function () {
     if (scrollHeight - height -1000 < document.body.clientHeight/2 && !articleLoading && feed.selector.hasOwnProperty('next')) {
         renderArticles()
     }
-
-
 });

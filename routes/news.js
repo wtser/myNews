@@ -8,6 +8,7 @@ router.post('/', function (req, res, next) {
     var url = obj.url;
 
     fetchUrl(url, function (error, meta, body) {
+        body = body || '';
         var html = body.toString();
         res.send(html);
     });
