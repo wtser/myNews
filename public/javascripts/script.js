@@ -32,6 +32,9 @@ $(".reader__site-item--sites").on("click", ".reader__site-item", function () {
 
 })
 
+$(".reader__site-item--all").on("click",function(){
+    $(".reader__site-items").toggle()
+})
 
 $(window).scroll(function () {
     var scrollHeight = document.body.scrollHeight;

@@ -7,31 +7,31 @@ var sites =
             "selector": ".name>a",
             "desc": "媒体热门推荐"
         },
-        {
-            "icon": "http://y1.ifengimg.com/index/72x72_2520ifeng.png",
-            "url": "http://news.ifeng.com/hotnews/",
-            "name": "凤凰网 热点新闻",
-            "type": "html",
-            "selector": {
-                "item": ".tab_01 tr h3",
-                "title": "a",
-                "href": "a"
-            },
-            "desc": "中国领先的综合门户网站"
-        },
-        {
-            "icon": "",
-            "url": "http://www.vccoo.com/a/ukc23",
-            "name": "大象工会",
-            "type": "html",
-            "selector": {
-                "item": ".classify-list>.classify-list-con",
-                "title": "h3>a",
-                "href": "h3>a",
-                "next": ".next-page"
-            },
-            "desc": 18
-        },
+        // {
+        //     "icon": "http://y1.ifengimg.com/index/72x72_2520ifeng.png",
+        //     "url": "http://news.ifeng.com/hotnews/",
+        //     "name": "凤凰网 热点新闻",
+        //     "type": "html",
+        //     "selector": {
+        //         "item": ".tab_01 tr h3",
+        //         "title": "a",
+        //         "href": "a"
+        //     },
+        //     "desc": "中国领先的综合门户网站"
+        // },
+        // {
+        //     "icon": "",
+        //     "url": "http://www.vccoo.com/a/ukc23",
+        //     "name": "大象工会",
+        //     "type": "html",
+        //     "selector": {
+        //         "item": ".classify-list>.classify-list-con",
+        //         "title": "h3>a",
+        //         "href": "h3>a",
+        //         "next": ".next-page"
+        //     },
+        //     "desc": 18
+        // },
         {
             "name": "startup news",
             "url": "http://news.dbanotes.net/",
@@ -228,19 +228,19 @@ var sites =
             "type": "html",
             "desc": "没得比最受关注商品推荐"
         },
-        {
-            "type": "ajax",
-            "api": "https://hstar-hi.alicdn.com/dream/ajax/getProjectList.htm?page=1&pageSize=30&projectType=&type=6&status=1&sort=1",
-            "icon": "https://img.alicdn.com/tps/TB19yVcJFXXXXaNXFXXXXXXXXXX-384-119.png",
-            "url": "https://hi.taobao.com/market/hi/list.php",
-            "selector": {
-                "item": "data",
-                "title": "name",
-                "href": "link"
-            },
-            "name": "淘宝众筹",
-            "desc": "认真对待每一个梦想"
-        },
+        // {
+        //     "type": "ajax",
+        //     "api": "https://hstar-hi.alicdn.com/dream/ajax/getProjectList.htm?page=1&pageSize=30&projectType=&type=6&status=1&sort=1",
+        //     "icon": "https://img.alicdn.com/tps/TB19yVcJFXXXXaNXFXXXXXXXXXX-384-119.png",
+        //     "url": "https://hi.taobao.com/market/hi/list.php",
+        //     "selector": {
+        //         "item": "data",
+        //         "title": "name",
+        //         "href": "link"
+        //     },
+        //     "name": "淘宝众筹",
+        //     "desc": "认真对待每一个梦想"
+        // },
         {
             "icon": "http://static.360buyimg.com/finance/base/1.2.0/images/logo-slogan.png",
             "url": "http://z.jd.com/bigger/search.html?status=2&sort=zhtj&categoryId=&parentCategoryId=&sceneEnd=&productEnd=&keyword=&page=1&pageSize=30",
@@ -266,31 +266,31 @@ var sites =
             "type": "html",
             "desc": "1024"
         },
-        {
-            "name": "草榴亚洲无码区",
-            "url": "http://t66y.com/thread0806.php?fid=2",
-            "icon": "http://static.xgres.com/lianbo/avatar/1000463/120/1316745536",
-            "selector": {
-                "item": "#ajaxtable .t_one",
-                "title": "h3>a",
-                "href": "h3>a",
-                "next": ".pages>a:nth-last-child(2)"
-            },
-            "type": "html",
-            "desc": "1024"
-        },
-        {
-            "name": "草榴 達蓋爾的旗幟",
-            "url": "http://t66y.com/thread0806.php?fid=16",
-            "icon": "http://static.xgres.com/lianbo/avatar/1000463/120/1316745536",
-            "selector": {
-                "item": "#ajaxtable .t_one",
-                "title": "h3>a",
-                "href": "h3>a",
-                "next": ".pages>a:nth-last-child(2)"
-            },
-            "type": "html",
-            "desc": "1024"
-        }
+        // {
+        //     "name": "草榴亚洲无码区",
+        //     "url": "http://t66y.com/thread0806.php?fid=2",
+        //     "icon": "http://static.xgres.com/lianbo/avatar/1000463/120/1316745536",
+        //     "selector": {
+        //         "item": "#ajaxtable .t_one",
+        //         "title": "h3>a",
+        //         "href": "h3>a",
+        //         "next": ".pages>a:nth-last-child(2)"
+        //     },
+        //     "type": "html",
+        //     "desc": "1024"
+        // },
+        // {
+        //     "name": "草榴 達蓋爾的旗幟",
+        //     "url": "http://t66y.com/thread0806.php?fid=16",
+        //     "icon": "http://static.xgres.com/lianbo/avatar/1000463/120/1316745536",
+        //     "selector": {
+        //         "item": "#ajaxtable .t_one",
+        //         "title": "h3>a",
+        //         "href": "h3>a",
+        //         "next": ".pages>a:nth-last-child(2)"
+        //     },
+        //     "type": "html",
+        //     "desc": "1024"
+        // }
     ];
 module.exports = sites;

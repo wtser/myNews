@@ -135,3 +135,62 @@ html, .reader {
     overflow: auto;
     max-height: 400px;
 }
+
+/* response */
+
+@media (max-width: 375px){
+    .reader{
+        height: auto;
+    }
+    .reader__sidebar{
+        position: static;
+        width: 100%;
+        float: none;
+        padding-left: 0;
+        background-color: #fff;
+        padding: 0.5rem 1rem;
+
+    }
+    .reader__icon{
+        display: none;
+    }
+    .reader__news{
+        margin-left: 0;
+        width: 100%;
+    }
+    .reader__list{
+        padding: 0.5rem;
+    }
+    .reader__site{
+        margin-left: 0;
+    }
+    .reader__site-items{
+        display: none;
+    }
+    .reader__site-item{
+        display: inline-block;
+        width: auto;
+        padding-right: 10px;
+    }
+    .reader__site-item:last-child{
+        padding-right: 0;
+    }
+    .reader__site-item-divider{
+        display: none;
+    }
+    .reader__site-item--settings{
+        display: none;
+    }
+    .reader__site-item--all{
+        padding-right: 0;
+        display: block;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    .reader__site-item--sites{
+        display: block;
+    }
+
+    
+
+}
