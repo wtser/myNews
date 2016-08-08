@@ -1,12 +1,12 @@
 var sites =
     [
-        {
-            "name": "网易新闻",
-            "url": "http://news.163.com/jnews/",
-            "icon": "http://static.xgres.com/lianbo/avatar/1000463/120/1316745536",
-            "selector": ".name>a",
-            "desc": "媒体热门推荐"
-        },
+        // {
+        //     "name": "网易新闻",
+        //     "url": "http://news.163.com/jnews/",
+        //     "icon": "http://static.xgres.com/lianbo/avatar/1000463/120/1316745536",
+        //     "selector": ".name>a",
+        //     "desc": "媒体热门推荐"
+        // },
         // {
         //     "icon": "http://y1.ifengimg.com/index/72x72_2520ifeng.png",
         //     "url": "http://news.ifeng.com/hotnews/",
@@ -84,9 +84,9 @@ var sites =
             "desc": "技术极客的头条新闻"
         },
         {
-            "icon": "http://www.v2ex.com/static/img/icon_rayps_64.png",
+            "icon": "https://www.v2ex.com/static/img/icon_rayps_64.png",
             "name": "v2ex",
-            "url": "http://www.v2ex.com/?tab=hot",
+            "url": "https://www.v2ex.com/?tab=hot",
             "selector": {
                 "item": "span.item_title > a",
                 "title": "span.item_title > a",
