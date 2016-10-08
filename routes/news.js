@@ -42,7 +42,7 @@ function parseHtml2ArticleList(feed, articleNodes) {
                         href: item.querySelector(feed.selector.href).attributes.href.nodeValue
                     };
                     if (article.href.indexOf('http') === -1) {
-                        baseUrl = feed.url.match(/http[s]?:\/\/+[\s\S]+?\//)[0].slice(0, -1);
+                        baseUrl = feed.url.match(/http[s]?:\/\/+[\s\S]+/)[0].slice(0, -1);
                         if (article.href[0] !== '/') {
                             baseUrl += '/';
                         }
@@ -59,7 +59,7 @@ function parseHtml2ArticleList(feed, articleNodes) {
             var parsedData = data[feed.selector.item].map(function (a) {
                 var baseUrl;
                 if (a[feed.selector.href].indexOf('http') === -1) {
-                    baseUrl = feed.url.match(/http[s]?:\/\/+[\s\S]+?\//)[0].slice(0, -1);
+                    baseUrl = feed.url.match(/http[s]?:\/\/+[\s\S]+/)[0].slice(0, -1);
                     if (a[feed.selector.href][0] !== '/') {
                         baseUrl += '/';
                     }

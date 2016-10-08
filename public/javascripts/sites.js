@@ -31,20 +31,20 @@ var sites =
         //         "next": ".next-page"
         //     },
         //     "desc": 18
+        // // },
+        // {
+        //     "name": "startup news",
+        //     "url": "http://news.dbanotes.net/",
+        //     "icon": "http://news.dbanotes.net/logo.png",
+        //     "selector": {
+        //         "item": "tr .title:not([valign=top])",
+        //         "title": "a",
+        //         "href": "a",
+        //         "next": "tr:last-child .title>a"
+        //     },
+        //     "type": "html",
+        //     "desc": "中文版的 Hacker News"
         // },
-        {
-            "name": "startup news",
-            "url": "http://news.dbanotes.net/",
-            "icon": "http://news.dbanotes.net/logo.png",
-            "selector": {
-                "item": "tr .title:not([valign=top])",
-                "title": "a",
-                "href": "a",
-                "next": "tr:last-child .title>a"
-            },
-            "type": "html",
-            "desc": "中文版的 Hacker News"
-        },
         {
             "icon": "http://www.solidot.org/favicon.ico",
             "title": "solidot",
@@ -72,8 +72,8 @@ var sites =
             "desc": "HN"
         },
         {
-            "icon": "http://toutiao.io/apple-icon-180x180.png",
-            "url": "http://toutiao.io",
+            "icon": "https://toutiao.io/apple-icon-180x180.png",
+            "url": "https://toutiao.io",
             "name": "开发者头条",
             "type": "html",
             "selector": {
