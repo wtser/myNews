@@ -71,10 +71,15 @@ $(".reader__list").on("click",".reader__list-item",function(){
     })
 })
 
-$(window).scroll(function () {
-    var scrollHeight = document.body.scrollHeight;
-    var height = $(window).scrollTop();
-    if (scrollHeight - height - 1000 < document.body.clientHeight / 2 && !articleLoading && feed.hasOwnProperty('nextUrl')) {
-        renderArticles()
+
+document.querySelector('.reader__news').addEventListener('scroll', function (e) {
+    if (  feed.hasOwnProperty('nextUrl')) {
+
+        var $ele = e.target
+        var percent = $ele.clientHeight / ($ele.scrollHeight - $ele.scrollTop )
+        if (percent > 0.7 && articleLoading == false) {
+            articleLoading = true;
+            renderArticles()
+        }
     }
-});
+})

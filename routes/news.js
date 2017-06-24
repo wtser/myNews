@@ -33,21 +33,47 @@ function parseHtml2ArticleList(feed, articleNodes) {
         },
         html: function () {
             var article, baseUrl, i, item, parsedData = [];
+
+            var getText = function (node, selector) {
+                var dom = node.querySelector(selector)
+                if (dom && (dom = dom.textContent.trim())) {
+                    return dom
+                } else {
+                    return ''
+                }
+
+            }
+            var getHref = function (node, selector) {
+                var dom = node.querySelector(selector)
+                if (dom && (dom = dom.getAttribute('href'))) {
+                    if (dom.indexOf('http') === -1) {
+                        if (dom[0] != '/') {
+                            let linkArr = feed.url.split('/')
+                            linkArr.pop();
+                            linkArr.push(dom)
+                            dom = linkArr.join('/')
+                        } else if (dom[1] != '/') {
+                            dom = feed.domain + dom
+                        } else {
+                            dom = 'http:' + dom
+                        }
+
+                    }
+                    return dom
+                } else {
+                    return ''
+                }
+
+            }
+
             if (articleNodes.length > 0) {
                 i = 0;
                 while (i < articleNodes.length) {
                     item = articleNodes[i];
                     article = {
-                        title: item.querySelector(feed.selector.title).textContent.trim(),
-                        href: item.querySelector(feed.selector.href).attributes.href.nodeValue
+                        title: getText(item,feed.selector.title),
+                        href: getHref(item,feed.selector.href)
                     };
-                    if (article.href.indexOf('http') === -1) {
-                        baseUrl = feed.url.match(/http[s]?:\/\/+[\s\S]+/)[0].slice(0, -1);
-                        if (article.href[0] !== '/') {
-                            baseUrl += '/';
-                        }
-                        article.href = baseUrl + article.href;
-                    }
                     parsedData.push(article);
                     i++;
                 }
@@ -97,6 +123,10 @@ function parseNextPage(feed, nextUrl) {
 router.post('/', function (req, res, next) {
     var obj = req.body.feed;
     var feed = JSON.parse(obj);
+
+    feed.domain = feed.url.split('/');
+    feed.domain = feed.domain[0] + '//' + feed.domain[2];
+
     var url = feed.nextUrl || feed.url;
 
     fetchUrl(url, function (error, meta, body) {

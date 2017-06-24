@@ -1,25 +1,23 @@
 extends layout
 
 block content
-    div.reader__sidebar
-        div.reader__icon
-            img(src='/images/icon.png' ,srcset='/images/icon@2x.png 2x')
-        ul.reader__site
-            li.reader__site-item.reader__site-item--all.reader__site-item--active All News
-            li.reader__site-item.reader__site-item-divider
-            li.reader__site-item.reader__site-item--sites
-                ul.reader__site-items
-                    each site,index in sites
-                        li.reader__site-item(data-index=index)
-                            span.reader__site-title= site.name
-            li.reader__site-item.reader__site-item-divider
-            li.reader__site-item.reader__site-item--settings Settings
-    div.reader__news
-        ul.reader__list
-            li.reader__list-item
-                a.reader__list-item-link(href="http://dopeboy.github.io/gaza/")
-                    span.reader__list-item-title.ellipsis Mentoring in Gaza's first hackathon
-                    span.reader__list-item-below.ellipsis http://sf.gg
-
-
+    div.reader__main
+        div.reader__sidebar
+            div.reader__icon
+                img(src='/images/icon.png' ,srcset='/images/icon@2x.png 2x')
+            ul.reader__site
+                li.reader__site-item.reader__site-item--all.reader__site-item--active All News
+                li.reader__site-item.reader__site-item-divider
+                li.reader__site-item.reader__site-item--sites
+                    ul.reader__site-items
+                        each site,index in sites
+                            li.reader__site-item(data-index=index)
+                                span.reader__site-title= site.name
+                div.reader__config
+                    li.reader__site-item.reader__site-item-divider
+                    li.reader__site-item.reader__site-item--settings Settings
+        div.reader__news
+            div.reader__loading.hide
+                div.reader__loading-text Loading
+            ul.reader__list
     script window.sites = !{JSON.stringify(sites)}
