@@ -48,7 +48,7 @@ function parseHtml2ArticleList(feed, articleNodes) {
                 if (dom && (dom = dom.getAttribute('href'))) {
                     if (dom.indexOf('http') === -1) {
                         if (dom[0] != '/') {
-                            let linkArr = feed.url.split('/')
+                            var linkArr = feed.url.split('/')
                             linkArr.pop();
                             linkArr.push(dom)
                             dom = linkArr.join('/')
